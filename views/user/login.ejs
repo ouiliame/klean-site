@@ -1,0 +1,50 @@
+<section class="hero is-dark is-fullheight is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-4 is-offset-4">
+          <h1 class="title">
+            Log in to <b>klean</b>
+          </h1>
+          <form class="box" method="POST" action="/login">
+            <p class="control has-icon">
+              <input required class="input is-medium" name="email" type="email" placeholder="Email Address">
+              <span class="icon is-small">
+                <i class="fa fa-envelope"></i>
+              </span>
+            </p>
+            <p class="control has-icon">
+              <input required class="input is-medium" name="password" type="password" placeholder="Password">
+              <span class="icon is-small">
+                <i class="fa fa-lock"></i>
+              </span>
+            </p>
+
+            <div class="control is-grouped">
+              <p class="control has-addons">
+                <button type="submit" class="button is-info is-medium">
+                  <span class="icon is-small">
+                    <i class="fa fa-sign-in"></i>
+                  </span>
+                  <span>Log in</span>
+                </button>
+              </p>
+              <p class="control has-addons">
+                <a class="button is-danger is-medium" href="/">
+                  <span class="icon is-small">
+                    <i class="fa fa-home"></i>
+                  </span>
+                  <span>Return to homepage</span>
+                </a>
+              </p>
+            </div>
+          </form> <!-- box -->
+          <div class="has-text-centered">
+            <a href="">I forgot my password</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/signup">I need an account</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
