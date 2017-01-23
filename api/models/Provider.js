@@ -13,13 +13,23 @@ module.exports = {
       required: true
     },
 
+    user: {
+      model: 'user',
+      unique: true
+    },
+
+    clients: {
+      collection: 'client',
+      via: 'provider'
+    },
+
     fleet: {
       collection: 'vehicle',
       via: 'provider'
     },
 
     drivers: {
-      collections: 'driver',
+      collection: 'driver',
       via: 'provider'
     }
   }

@@ -74,13 +74,14 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  // somePostgresqlServer: {
-  //   adapter: 'sails-postgresql',
-  //   host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
-  //   user: 'YOUR_POSTGRES_USER', // optional
-  //   password: 'YOUR_POSTGRES_PASSWORD', // optional
-  //   database: 'YOUR_POSTGRES_DB' //optional
-  // }
+  PostgreSQL: {
+     adapter: 'sails-postgresql',
+     host: 'aws-us-west-2-portal.1.dblayer.com',
+     port: 15669,
+     user: 'site_deployer', // optional
+     password: 'profiterol64', // optional
+     database: 'klean' //optional
+  }
 
 
   /***************************************************************************

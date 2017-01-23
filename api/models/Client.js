@@ -19,6 +19,10 @@ module.exports = {
       required: true
     },
 
+    provider: {
+      model: 'provider'
+    },
+
     address: {
       type: 'string',
       required: true

@@ -19,7 +19,7 @@ module.exports = {
 				return res.redirect('/login');
 			}
 			req.session.user = user;
-			return res.redirect('/app');
+			return res.redirect('/profile');
 		});
   },
 
@@ -40,5 +40,12 @@ module.exports = {
     return res.json({
       todo: 'signup() is not implemented yet!'
     });
+  },
+
+  /**
+   * `UserController.profile()`
+   */
+  profile: function (req, res) {
+    return res.view();
   }
 };

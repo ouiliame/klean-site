@@ -32,9 +32,9 @@ module.exports = {
       required: true
     },
 
-    client: {
-      model: 'client',
-      unique: true
+    clients: {
+      collection: 'client',
+      via: 'user'
     },
 
     provider: {
@@ -50,7 +50,7 @@ module.exports = {
 
   tryLogin: function(email, password, cb) {
     User.findOne({
-      email: email,
+      email: email.toLowerCase().trim(),
       passwordHash: hash(password)
     }).exec(cb);
   }
