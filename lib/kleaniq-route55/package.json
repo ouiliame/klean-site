@@ -1,0 +1,30 @@
+{
+  "name": "kleaniq-route66",
+  "version": "0.0.1",
+  "description": "Vehicle routing library for grease services, powered by Jsprit.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -c --reporter dot --timeout 10000"
+  },
+  "keywords": [
+    "vehicle",
+    "routing",
+    "kleaniq"
+  ],
+  "author": "William Chen",
+  "license": "Unlicense",
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "java": "^0.8.0",
+    "joi": "^8.0.5",
+    "lodash": "^4.11.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "express": "^4.13.4",
+    "faker": "^3.1.0",
+    "mocha": "^2.4.5"
+  },
+  "repository": "https://bitbucket.org/uxrg/route66"
+}
