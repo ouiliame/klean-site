@@ -19,7 +19,7 @@ module.exports = {
 				return res.redirect('/login');
 			}
 			req.session.user = user;
-			return res.redirect('/profile');
+			return res.redirect('/routes');
 		});
   },
 

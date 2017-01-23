@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://unpkg.com/vue-material@0.6.3/dist/vue-material.css">
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-material@0.6.3/dist/vue-material.js"></script>
+
+<div id="app">
+  <md-toolbar>
+    <md-button class="md-icon-button">
+      <md-icon>menu</md-icon>
+    </md-button>
+
+    <h2 class="md-title" style="flex: 1">Route Optimization Helper</h2>
+
+    <md-button href="/logout">
+      <md-icon>exit_to_app</md-icon>
+      Logout
+    </md-button>
+  </md-toolbar>
+
+  <div style="padding: 15px">
+    <md-input-container>
+      <label>Name for this route optimization</label>
+      <md-input required></md-input>
+    </md-input-container>
+
+    <span class="md-title">1. Assemble the fleet for this optimization project</span><br/>
+    <span class="md-subtitle">
+      It is possible that the jobs can be completed with fewer vehicles than specified.
+      If total requirements exceed selected fleet capacity, some jobs will not be assigned.
+    </span>
+    <md-table>
+      <md-table-header>
+        <md-table-row>
+          <md-table-head>Vehicle Name</md-table-head>
+          <md-table-head md-numeric>Fryer Oil cap. (gal)</md-table-head>
+          <md-table-head md-numeric>Grease Trap cap. (gal)</md-table-head>
+          <md-table-head>Can do Hood Cleaning?</md-table-head>
+          <md-table-head>Can do Hydrojetting?</md-table-head>
+        </md-table-row>
+      </md-table-header>
+
+      <md-table-body>
+        <md-table-row md-selection>
+          <md-table-cell>VH-1</md-table-cell>
+          <md-table-cell md-numeric>1500</md-table-cell>
+          <md-table-cell md-numeric>1200</md-table-cell>
+          <md-table-cell><md-icon class="md-primary">check</md-icon></md-table-cell>
+          <md-table-cell><md-icon class="md-warn">close</md-icon></md-table-cell>
+        </md-table-row>
+      </md-table-body>
+
+      <md-table-body>
+        <md-table-row md-selection>
+          <md-table-cell>VH-2</md-table-cell>
+          <md-table-cell md-numeric>1200</md-table-cell>
+          <md-table-cell md-numeric>0</md-table-cell>
+          <md-table-cell><md-icon class="md-warn">close</md-icon></md-table-cell>
+          <md-table-cell><md-icon class="md-warn">close</md-icon></md-table-cell>
+        </md-table-row>
+      </md-table-body>
+
+      <md-table-body>
+        <md-table-row md-selection>
+          <md-table-cell>VH-3</md-table-cell>
+          <md-table-cell md-numeric>1500</md-table-cell>
+          <md-table-cell md-numeric>1200</md-table-cell>
+          <md-table-cell><md-icon class="md-warn">close</md-icon></md-table-cell>
+          <md-table-cell><md-icon class="md-warn">close</md-icon></md-table-cell>
+        </md-table-row>
+      </md-table-body>
+    </md-table>
+    <br/>
+
+    <span class="md-title">2. Specify the required jobs to be completed</span><br/>
+    <span class="md-subtitle">
+      Search for clients using the search bar. You can edit a job's details before adding it to the queue.
+    </span>
+
+    <br/>
+    <md-layout>
+      <md-layout>
+        <md-input-container>
+          <md-icon>search</md-icon>
+          <label>Search through your clients...</label>
+          <md-input type="tel"></md-input>
+        </md-input-container>
+
+        <md-bottom-bar>
+          <md-bottom-bar-item md-icon="delete_sweep" md-active>Fryer Oil</md-bottom-bar-item>
+          <md-bottom-bar-item md-icon="whatshot">Grease Trap</md-bottom-bar-item>
+          <md-bottom-bar-item md-icon="local_laundry_service">Hood Cleaning</md-bottom-bar-item>
+          <md-bottom-bar-item md-icon="invert_colors">Hydrojetting</md-bottom-bar-item>
+        </md-bottom-bar>
+      </md-layout>
+
+      <md-layout>
+        <md-list>
+          <md-list-item disabled>
+            There are currently no jobs in queue.
+          </md-list-item>
+        </md-layout>
+      </md-list>
+    </md-layout>
+  </div>
+
+</div>
+
+<script>
+Vue.use(VueMaterial);
+var App = new Vue({
+  el: '#app'
+});
+</script>

@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://unpkg.com/vue-material@0.6.3/dist/vue-material.css">
+<script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-material@0.6.3/dist/vue-material.js"></script>
+
+<div id="app">
+  <md-toolbar>
+    <md-button class="md-icon-button">
+      <md-icon>menu</md-icon>
+    </md-button>
+
+    <h2 class="md-title" style="flex: 1">Route Optimization Helper</h2>
+
+    <md-button href="/logout">
+      <md-icon>exit_to_app</md-icon>
+      Logout
+    </md-button>
+  </md-toolbar>
+
+  <md-list>
+    <md-list-item disabled>
+        <span class="md-title">You don't have any routes saved on your account.</span>
+    </md-list-item>
+    <md-list-item href="/routes/new">
+      <md-icon class="md-primary">note_add</md-icon>
+      <span>Start a new route optimization</span>
+    </md-list-item>
+  </md-list>
+
+</div>
+
+<script>
+Vue.use(VueMaterial);
+var App = new Vue({
+  el: '#app'
+});
+</script>

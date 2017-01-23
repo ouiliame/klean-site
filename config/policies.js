@@ -49,7 +49,7 @@ module.exports.policies = {
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
 
-  UserController: {
-    profile: 'providerAuth'
+  RoutesController: {
+    '*': 'providerAuth'
   }
 };

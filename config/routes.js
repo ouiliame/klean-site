@@ -38,7 +38,13 @@ module.exports.routes = {
   'post /login': 'UserController.login',
   'post /signup': 'UserController.signup',
   '/logout': 'UserController.logout',
-  'get /profile': 'UserController.profile'
+  'get /profile': 'UserController.profile',
+
+  '/routes': 'RoutesController.index',
+  'get /routes/new': { view: 'routes/new' },
+  'get /routes/:id': 'RoutesController.findOne',
+  'post /routes/new': 'RoutesController.new'
+
 
 
 
